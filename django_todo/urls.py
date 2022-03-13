@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from todo.views import say_hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', say_hello, name='hello') # this means that if I open the browser and apend /hello it will run say_hello
 ]
